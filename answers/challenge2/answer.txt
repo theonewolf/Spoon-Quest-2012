@@ -1,0 +1,12 @@
+Puzzle Name: Even Numbers Have Names
+
+Image: Pumpkin Pie
+
+Text: All is never as it seems.  Look behind the facade and into the true
+      meaning.  There the clues lie to unlock this challenge.  The key, well,
+      by what common moniker are you called?
+
+Hint: Looking behind the facade involves using a Linux utility to reverse
+      a technique commonly related to cryptography.
+
+Answer: pi

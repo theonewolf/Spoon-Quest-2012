@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Spoon Quest: Challenge 1 -- A Little 9x9 Warmup</title>
+    <!-- Bootstrap -->
+    <link href="static/css/bootstrap.min.css"
+          rel="stylesheet" media="screen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/css/bootstrap-responsive.min.css"
+          rel="stylesheet">
+    <link href="static/css/spoonquest.css"
+          rel="stylesheet">
+  </head>
+  <body>
+    <div class="container-fluid">
+        <div class="row offset2">
+            <div class="span8">
+                <h1>Challenge 1: A Little 9x9 Warmup</h1>
+            </div>
+        </div>
+
+        <div class="row offset2">
+            <div class="span8 offset1">
+                <form action="{{ url_for('challenge1') }}" method="post"
+                      autocomplete="off"
+                      enctype="application/x-www-form-urlencoded">
+                    <table class="table-bordered table-striped span4"
+                           style="text-align: center;">
+                                {% for row in START %}
+                                {% set index = (loop.index - 1) * 9 %}
+                                <tr>
+                                  {% for col in row %}
+                                  {% if col == 0 %}
+                                    {% set index2 = index - 1 + loop.index %}
+                                    <td>
+                                        <input type="text" maxlength="1"
+                                               class="input-tiny"
+                                               name="{{ index2 }}">
+                                    {% else %}
+                                    <td class="text-success">
+                                        <strong>{{ col }}
+                                        </strong>
+                                    {% endif %}
+                                    </td>
+                                  {% endfor %}
+                                </tr>
+                              {% endfor %}
+                    </table>
+                    <button class="btn span2" type="submit">Proceed</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="row offset2">
+            <div class="span8">
+                <p>Not much to it. Find the magic numbers, and move on.</p>
+            </div>
+        </div>
+
+        <div class="row offset2">
+            <div class="span8 well">
+            <button type="button" class="btn btn-info" data-toggle="collapse"
+                    data-target="#hint">
+                Show Hint 
+            </button>
+            <p id="hint" class="text-info collapse" style="margin-top: 10px;">
+                Uhm, just do the Sudoku puzzle!?
+            </p>
+            </div>
+        </div>
+    </div>
+    <script src="static/js/jquery-latest.min.js"></script>
+    <script src="static/js/bootstrap.min.js">
+    </script>
+  </body>
+</html>

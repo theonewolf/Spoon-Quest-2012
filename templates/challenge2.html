@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Spoon Quest: Challenge 2 -- Even Numbers Have Names</title>
+    <!-- Bootstrap -->
+    <link href="static/css/bootstrap.min.css"
+          rel="stylesheet" media="screen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/css/bootstrap-responsive.min.css"
+          rel="stylesheet">
+    <link href="static/css/spoonquest.css"
+          rel="stylesheet">
+  </head>
+  <body>
+    <div class="container-fluid">
+        <div class="row offset2">
+            <div class="span8">
+                <h1>Challenge 2: Even Numbers Have Names</h1>
+                <img src="static/img/challenge2.jpg" class="img-polaroid">
+                <p style="margin-top: 10px;">All is never as it seems.  Look
+                   behind the facade and extract the true meaning.  Find the
+                   double meaning in the pixels.  There the clues lie to unlock
+                   this challenge.  The key, well, by what common moniker are
+                   you called?  Use the key, and only then will you find the
+                   answer to this challenge.
+                </p>
+            </div>
+        </div>
+
+        <div class="row offset2">
+            <div class="span8 offset2">
+                <div class="input-append">
+                    <form action="{{ url_for('challenge2') }}" method="post"
+                          autocomplete="off"
+                          enctype="application/x-www-form-urlencoded">
+                        <input class="span2" id="appendedInputButton"
+                               type="text" name="answer">
+                        <button class="btn" type="submit">Proceed</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="row offset2">
+            <div class="span8 well">
+            <button type="button" class="btn btn-info" data-toggle="collapse"
+                    data-target="#hint">
+                Show Hint 
+            </button>
+            <p id="hint" class="text-info collapse" style="margin-top: 10px;">
+                Looking behind the facade involves using a Linux utility to
+                reverse a technique related to cryptography, called
+                <a href="http://en.wikipedia.org/wiki/Steganography">
+                steganography</a>.
+            </p>
+            </div>
+        </div>
+    </div>
+    <script src="static/js/jquery-latest.min.js"></script>
+    <script src="static/js/bootstrap.min.js">
+    </script>
+  </body>
+</html>

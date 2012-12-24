@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Spoon Quest: Challenge 3 -- Perfect Secrecy</title>
+    <!-- Bootstrap -->
+    <link href="static/css/bootstrap.min.css"
+          rel="stylesheet" media="screen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/css/bootstrap-responsive.min.css"
+          rel="stylesheet">
+    <link href="static/css/spoonquest.css"
+          rel="stylesheet">
+  </head>
+  <body>
+    <div class="container-fluid">
+        <div class="row offset2">
+            <div class="span8">
+                <h1>Challenge 3: Perfect Secrecy</h1>
+                <pre>
+    0x18 0x0b 0x09 0x4c 0x4f 0x49 0x07 0x0d 0x09 0x1e 0x01 0x54 0x4f 0x67 0x1d 0x1a
+    0x08 0x45 0x4a 0x1b 0x0a 0x4b 0x4d 0x74 0x09 0x09 0x4c 0x4b 0x41 0x02 0x0b 0x45
+    0x49 0x10 0x49 0x1f 0x1e 0x00 0x00 0x0e 0x54 0x3b 0x49 0x15 0x49 0x01 0x0a 0x4c
+    0x0d 0x48 0x11 0x1a 0x43 0x00 0x24 0x0b 0x1c 0x00 0x10 0x1d 0x02 0x07 0x0e 0x17
+    0x53 0x54 0x0e 0x57 0x03 0x0b 0x47 0x4e 0x26 0x4c 0x03 0x09 0x1c 0x1e 0x00 0x12
+    0x0d 0x15 0x00 0x15 0x06 0x0d 0x53 0x49 0x0f 0x54 0x54 0x1c 0x0d 0x45 0x44 0x04
+    0x1c 0x0f 0x4e 0x0a 0x15 0x53 0x45 0x14 0x0c 0x1c 0x1d 0x00 0x13 0x09 0x08 0x08
+    0x00 0x00
+                </pre>
+                <p style="margin-top: 10px;">Incredible complexity lies within
+                    the beautiful simplicity of logic.  If only there was:
+                    <blockquote>
+<pre>One cipher to rule them all, one cipher to find them, One cipher to bring them all and in the darkness bind them.
+</pre>
+                    </blockquote>
+                </p>
+            </div>
+        </div>
+
+        <div class="row offset2">
+            <div class="span8 offset2">
+                <div class="input-append">
+                    <form action="{{ url_for('challenge3') }}" method="post"
+                          autocomplete="off"
+                          enctype="application/x-www-form-urlencoded">
+                        <input class="span2" id="appendedInputButton"
+                               type="text" name="answer">
+                        <button class="btn" type="submit">Proceed</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="row offset2">
+            <div class="span8 well">
+            <button type="button" class="btn btn-info" data-toggle="collapse"
+                    data-target="#hint">
+                Show Hint 
+            </button>
+            <p id="hint" class="text-info collapse" style="margin-top: 10px;">
+                One must first figure out the cipher system used here.
+                <a href="http://xrds.acm.org/blog/2012/08/unbreakable-cryptography-in-5-minutes/">OTP</a>
+                might help.  But then, what's the key?
+            </p>
+            </div>
+        </div>
+    </div>
+    <script src="static/js/jquery-latest.min.js"></script>
+    <script src="static/js/bootstrap.min.js">
+    </script>
+  </body>
+</html>

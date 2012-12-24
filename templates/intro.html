@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Spoon Quest Intro</title>
+    <!-- Bootstrap -->
+    <link href="static/css/bootstrap.min.css"
+          rel="stylesheet" media="screen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/css/bootstrap-responsive.min.css"
+          rel="stylesheet">
+    <link href="static/css/spoonquest.css"
+          rel="stylesheet">
+  </head>
+  <body>
+    <div class="container-fluid">
+        <div class="row offset2">
+            <div class="span8">
+                <h1>Willkommen auf der 2012 Spoon Quest!</h1>
+                <img src="static/img/spoonquest.jpg" height="455" width="320"
+                     class="img-polaroid offset2">
+                <p>Hello, and welcome to this year's version of the Spoon
+                   Quest.  To get your ultimate Christmas present this year,
+                   you must finish the Spoon Quest. You will face a series of
+                   increasingly challenging puzzles, three in total this year.
+                   This is the first year of Spoon Quest; thus, no official
+                   rules exist yet. Spoon Quest was inspired by
+                   <a href="http://imgur.com/a/GernB">these brothers</a> and
+                   <a href="https://blog.dropbox.com/2012/05/dropquest-ii-the-future-is-now/">the annual Dropquest</a>.
+                   Each challenge requires you to:
+                </p>
+                <ol class="offset2">
+                    <li>Learn a new skill</li>
+                    <li>Think deeply</li>
+                    <li>Compute (human or machine)</li>
+                </ol>
+                <p class="text-error">Begin Spoon Quest by entering the last
+                    name of <strong>D</strong>istrict <strong>A</strong>ttorney
+                    niel:
+                </p>
+            </div>
+        </div>
+
+        <div class="row offset2">
+            <div class="span8 offset2">
+                <div class="input-append">
+                    <form action="{{ url_for('intro') }}" method="post"
+                          autocomplete="off"
+                          enctype="application/x-www-form-urlencoded">
+                        <input class="span2" id="appendedInputButton"
+                               type="text" name="lastname">
+                        <button class="btn" type="submit">Proceed</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="row offset2">
+            <div class="span8 well">
+            <button type="button" class="btn btn-info" data-toggle="collapse"
+                    data-target="#hint">
+                Show Hint 
+            </button>
+            <p id="hint" class="text-info collapse" style="margin-top: 10px;">
+                You will find hints for every challenge. They start hidden, but
+                can be revealed with a click. You should attempt each challenge
+                without reading the hint, and use the hints only when you are
+                absolutely stuck.
+            </p>
+            </div>
+        </div>
+    </div>
+    <script src="static/js/jquery-latest.min.js"></script>
+    <script src="static/js/bootstrap.min.js">
+    </script>
+  </body>
+</html>
